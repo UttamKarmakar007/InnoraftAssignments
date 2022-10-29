@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .gcontainer{
+        width: 50%;
+        margin: 50px auto;
+        border: 1px solid grey;
+        height: 60vh;
+        display: grid;
+        grid-template-rows: 100px 350px 100px;   
+        grid-template-columns: 1fr 250px;
+        grid-gap: 10px;
+     }
+     .div1{
+        background-color:rgb(240, 61, 156);
+        grid-column: 1/-1;
+     }
+     .div2{
+        background-color: rgb(172, 10, 110);
+        grid-row: 2/3;
+     }
+     .div3{
+        background-color: rgb(212, 13, 169);
+        grid-row: 2/3;
+     }
+     .div4{
+        background-color: rgb(219, 28, 240);
+        grid-column: 1/-1;
+     }
+    </style>
+</head>
+<body>
+    <div class="gcontainer">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+</body>
+</html>
