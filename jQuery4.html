@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Grid practice</title>
+    <style>
+      .container{
+       width: 90%;
+       margin: 50px auto;
+       padding: 15px;
+       border: 30px solid grey;
+       display: grid;
+       grid-template-columns: 333px 1fr;
+       grid-template-rows: 90px 260px 90px 90px;
+       grid-gap: 15px;
+       color: white;
+       font-weight: bold;
+       font-size: 25px;
+      }
+      .header{
+        background-color: skyblue;
+        text-align: center;
+        grid-column: 1/-1;
+      }
+      .sidebar{
+        background-color: green;
+        text-align: center;
+        grid-column: 1/2;
+        grid-row: 2/4;
+      }
+      .main{
+        background-color: gold;
+        text-align: center;
+      }
+     .extra{
+        background-color: grey;
+        text-align: center;
+     }
+     .footer{
+        background-color: goldenrod;
+        text-align: center;
+        grid-column: 1/-1;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">main content</div>
+        <div class="extra">extra content</div>
+        <div class="footer">footer</div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.header').click(function(){
+                $('.header').css("background-color","red");
+            });
+            $('.extra').click(function(){
+                $('.main').fadeToggle(1000);
+            });
+            $('.sidebar').click(function(){
+                $('.sidebar').text("Leftbar");
+            });
+        });
+    </script>
+</body>
+</html>
