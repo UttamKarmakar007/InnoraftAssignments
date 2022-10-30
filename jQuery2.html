@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.1.min.js"></script>
+    <title>jQueries</title>
+    <style>
+        #flip {
+            background-color: grey;
+            border: 1px solid grey;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        #panel {
+            background-color: rgb(160, 210, 160);
+            border: 1px solid grey;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            display: none;
+            border-end-end-radius: 20px;
+            border-end-start-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">Click me to slide down</div>
+    <div id="panel">Hello World!</div>
+    <script>
+        $(document).ready(function(){
+            $('#flip').click(function(){
+                $('#panel').slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
